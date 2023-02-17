@@ -1,0 +1,81 @@
+:root {
+    --award-horizontal-width: 200px;   // * Ширина сертификата
+    --award-vertical-width: 120px;   // * Ширина диплома
+}
+.award {
+
+    &__section {
+    }
+
+    &__title {
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+
+        & > * {
+            margin: 8px;
+        }
+    }
+
+    &__item {
+        width: 200px;
+        height: 150px;
+
+        position: relative;
+
+        border-radius: var(--border-radius) / 2;
+
+        box-shadow: 0 0 25px var(--color-block);
+
+        cursor: pointer;
+        transition: var(--transition-default);
+
+
+        &:hover, &:active {
+            box-shadow: 0 0 25px var(--color-content);
+        }
+    }
+
+    &__img {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 100%;
+            width: 100%;
+
+            object-fit: cover;
+        }
+    }
+
+    &__stars {
+        position: absolute;
+
+        z-index: 3;
+    }
+}
+._award {   // * Модификации
+    &-horizontal {
+        width: var(--award-horizontal-width);
+        height: 150px;
+    }
+
+    &-vertical {
+        width: var(--award-vertical-width);
+        height: 180px;
+    }
+}

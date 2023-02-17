@@ -1,0 +1,59 @@
+/* &============================= Zeroing  ==============================*/
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: var(--font-color);
+}
+
+nav, footer, header, aside {
+	display: block;
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	line-height: 1.2;
+	font-size: var(--font-size);
+	font-family: var(--main-font);   /* * Семество шрифтов */
+	font-weight: var(--font-weight);
+	color: var(--font-color);
+	scroll-behavior: smooth;   /* * Плавная прокрутка по якорям */
+}
+
+input, button, textarea {
+	font-family: inherit;
+}
+
+input, textarea {
+	outline:none;
+	resize: none;
+}
+
+button {
+	cursor: pointer;
+	color: var(--font-color);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+	background-color: transparent;
+}
+
+li {
+	list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: inherit;
+	font-weight: var(--font-weight);
+}
+
+/* &===========================================================*/

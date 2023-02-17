@@ -1,0 +1,19 @@
+// ^ Переменные
+@import "./variable";
+// ^ Обнуление
+@import "./zeroing";
+// ^ Настройки
+@import "./setting";
+
+// ^ Головная секция
+@import "./component/head-section";
+// ^ Секция основной информации
+@import "./component/about-section";
+// ^ Секция карьеры
+@import "./component/career-section";
+// ^ Секция наград и достижений
+@import "./component/award-section";
+// ^ Секция фотогалерея
+@import "./component/gallery-section";
+// ^ Секция контактной информации
+@import "./component/contact-section";

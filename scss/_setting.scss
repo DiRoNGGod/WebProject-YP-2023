@@ -1,0 +1,95 @@
+/* &============================= Setting  ==============================*/
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+
+	overflow: hidden;
+}
+
+._container {
+	width: 100%;
+	max-width: var(--container-width);
+
+	margin: 0 auto;
+	padding: 0 var(--container-offset);
+}
+
+html, body {
+	background-color: var(--background-color);
+}
+
+section {
+	text-align: center;
+
+	margin-bottom: 50px;
+
+
+	@media (max-width: 900px) {
+		margin-bottom: 20px;
+	}
+}
+
+.footer {
+	background-color: var(--color-title);
+
+	font-size: 12px;
+	font-style: italic;
+
+	height: 50px;
+
+
+
+	&__content {
+		width: 100%;
+		height: 50px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* &===========================================================*/
+/* &============================= Common Styles ==============================*/
+
+.title {   // * Стили заголовка
+	background-color: var(--color-title);
+
+	width: 500px;
+
+	display: inline-block;
+
+	padding: 10px 5px;
+	margin-bottom: 15px;
+
+	border-radius: var(--border-radius);
+
+	font-size: 24px;
+	font-weight: 600;
+	text-align: center;
+
+	@media (max-width: 900px) {
+		width: 270px;
+
+		margin-bottom: 10px;
+
+		font-size: 18px;
+	}
+}
+
+.subtitle {
+	width: 300px;
+
+    font-size: 20px;
+
+    padding: 5px;
+
+	@media (max-width: 900px) {
+		width: 150px;
+
+		font-size: 16px;
+	}
+}
+
+/* &===========================================================*/
