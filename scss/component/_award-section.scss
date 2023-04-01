@@ -1,81 +1,128 @@
-:root {
-    --award-horizontal-width: 200px;   // * Ширина сертификата
-    --award-vertical-width: 120px;   // * Ширина диплома
-}
+
 .award {
 
     &__section {
+        
     }
 
     &__title {
     }
 
-    &__content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-
-
-        & > * {
-            margin: 8px;
-        }
+    &__content {   // ^ Размещение достижений
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        justify-items: center;
+        gap: 20px;
     }
 
-    &__item {
-        width: 200px;
-        height: 150px;
+    &__item {   // ^ Карточки достижений
+        width: 350px;
+        height: 180px;
 
         position: relative;
 
         border-radius: var(--border-radius) / 2;
 
-        box-shadow: 0 0 25px var(--color-block);
+        box-shadow: 0 0 10px var(--color-content);
 
-        cursor: pointer;
+        transition: var(--transition-default);
+    }
+}
+.card {   // ^ Отдельные стили карточки
+    background-color: var(--color-set-content);
+    border: 2px solid var(--color-set-accent);
+    border-radius: var(--border-radius);
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    overflow: hidden;
+
+    transition: var(--transition-default);
+
+
+    @media (max-width: 900px) {   // ^  Расширение карточки на весь экран
+        width: 100%;
+    }
+
+
+    &._active {   // ^ Разворот карточки появление тени
+        transform: rotateY(180deg);
+
+        cursor: default;
+
+        box-shadow: 0 0 25px var(--color-content);
+    }
+
+
+    &__title {   // ^ Заголовок карточки
+        font-size: 24px;
+
+        margin-bottom: 10px;
+    }
+
+
+    &__description {   // ^  Описание карточки
+        flex: 1 1 auto;
+
+        text-align: left;
+    }
+
+    &__button {   // ^ Кнопки для раскрытия
+        align-self: end;
+
+        padding: 5px;
+
+        background-color: var(--color-set-accent);
+
+        border-radius: calc(var(--border-radius) / 2);
+
         transition: var(--transition-default);
 
+        cursor: pointer;
 
-        &:hover, &:active {
-            box-shadow: 0 0 25px var(--color-content);
+
+        &:hover {   // ^ Появление тени при наведении
+            box-shadow: 0 0 10px var(--color-set-accent);
         }
     }
 
-    &__img {
-        position: relative;
+
+    &__img {   // ^ Картинка карточки
+        position: absolute;
+
+        top: 0;
+        left: 0;
 
         width: 100%;
         height: 100%;
 
-        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+
+        transform: rotateY(180deg);
+
+        transition: var(--transition-default);
 
 
-        & img {
+        &._hidden {   // ^ Стиль скрытия картинки
+            opacity: 0;
+            visibility: hidden;
+        }
+
+
+        & > img {
             position: absolute;
             top: 0;
             left: 0;
-
-            height: 100%;
             width: 100%;
+            height: 100%;
 
             object-fit: cover;
         }
     }
-
-    &__stars {
-        position: absolute;
-
-        z-index: 3;
-    }
 }
-._award {   // * Модификации
-    &-horizontal {
-        width: var(--award-horizontal-width);
-        height: 150px;
-    }
 
-    &-vertical {
-        width: var(--award-vertical-width);
-        height: 180px;
-    }
-}

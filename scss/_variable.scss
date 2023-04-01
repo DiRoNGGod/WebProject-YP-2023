@@ -8,22 +8,23 @@
 	}
 	--font-weight: 400;
 
-	--content-width: 1220px;   // * Контент
+	--content-width: 1440px;   // * Контент
 	--container-offset: 10px;   // * Отступы
     --container-width: calc(var(--content-width) + (var(--container-offset) * 2));   // * итоговый контейнер
 
 	--border-radius: 20px;
 
 	--color-black: #000;
+	--color-semi-black: #000000e1;
 	--color-white: #fff;
 
 	--color-set-background: #25274D;   // * Цвет для заднего фона
 	--color-set-background-add: #464866;   // * Цвет для заголовков
 	--color-set-load-content: #AAABB8;   // * Цвет используемый при загрузке картинок
-	--color-set-accent: #2E9CCA;   // * Акцент 
-	--color-set-content: #29648A;   // * Цвет для блоков контента
+	--color-set-content: #2E9CCA;   // * Акцент 
+	--color-set-accent: #29648A;   // * Цвет для блоков контента
 
-	--transition-default: 0.2s linear;
+	--transition-default: 0.3s linear;
 }
 
 /* &===========================================================*/

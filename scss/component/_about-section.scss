@@ -1,7 +1,9 @@
-:root {
+:root {   // ^ Переменные размера карты
     --card-width: 300px;
+    --card-height: 150px;
     @media (max-width: 900px) {
         --card-width: 240px;
+        --card-height: 120px;
     }
 }
 .about {
@@ -12,24 +14,26 @@
     &__title {
     }
 
-    &__row {
+    &__row {   // ^ Стили размещения карточек в секции
         display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(var(--card-width), 1fr));
         align-content: center;
+        justify-items: center;
         justify-content: center;
         gap: 15px;
-        grid-template-columns: repeat(auto-fill, var(--card-width));
 
 
-        @media (max-width: 900px) {
-            gap: 10px;
+        @media (max-width: 600px) {   // ^ Переход на флексы
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 
-    &__card {   // * Карточка с информацией
-        width: var(--card-width);
-        height: 150px;
+    &__card {   // ^ Стили карты
+        width: var(--card-width);    
+        height: var(--card-height);
 
-        padding: 5px 10px 5px 60px;
+        padding: 10px;
 
         background-color: var(--color-block);
 
@@ -37,24 +41,29 @@
 
         border-radius: var(--border-radius);
 
-        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
 
 
-        @media (max-width: 900px) {
-            height: 120px;
+        @media (max-width: 900px) {   // ^ Расширение на всю страницу
+            width: 100%;
         }
     }
 
-    &__img {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
+
+    &__info {   // ^ Картинка и заголовок карточки
+        display: flex;
+        align-items: end;
+
+        margin-bottom: 15px;
+    }
+
+
+    &__img {   // ^ Картинка карточки
+        position: relative;
+
+        width: 40px;
+        height: 40px;
 
 
         & img {
@@ -68,31 +77,20 @@
         }
     }
 
-    &__info {
-        margin-left: 10px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &__info-title {   // ^ Заголовок карточки
+        font-size: 20px;
+        font-weight: 700;
 
-
-        & > * {   // * Общие стили для всей информации в карточке
-            background-color: var(--color-content);
-            border-radius: calc(var(--border-radius) / 2);
-
-            padding: 5px;
-
-            text-align: center;
-        }
-
-        &-param {
-            font-weight: 600;
-
-            margin-bottom: 10px;
-        }
-
-        &-value {
-        }
+        margin-bottom: 2px;
+        margin-left: 5px;
     }
+
+
+    &__description {   // ^ Описание карточки
+        text-align: left;
+    }
+   
 }
+
 

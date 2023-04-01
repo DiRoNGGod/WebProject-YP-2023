@@ -6,14 +6,14 @@
     &__title {
     }
 
-    &__body {
+    &__body {   // ^ Расположение
         display: flex;
         justify-content: space-between;
 
         position: relative;
 
 
-        &::after {
+        &::after {   // ^ Линия посередине разных категорий
             content: "";
 
             position: absolute;
@@ -35,16 +35,16 @@
         }
     }
 
-    &__education {
+    &__education {   // ^ Блок образования
         flex: 0 0 50%;
     }
 
-    &__experience {
+    &__experience {   // ^ Блок опыта работы
         flex: 0 0 50%;
 
         position: relative;
 
-        &::after {
+        &::after {   // ^ Линия прогресса
             content: "";
 
             position: absolute;
@@ -81,11 +81,11 @@
         }
     }
 
-    &__subtitle {
+    &__subtitle {   // ^ Подзаголовки
         margin-bottom: 30px;
     }
 
-    &__row {
+    &__row {   // ^ Ряд мест
         font-size: 14px;
 
         display: flex;
@@ -104,7 +104,7 @@
         }
     }
 
-    &__period {
+    &__period {   // ^ Ряд из дат
         width: 120px;
         min-height: 30px;
 
@@ -150,6 +150,7 @@
     }
 }
 
+// ^ Отдельная настройка каждого пункта
 .education {
 
     &__title {

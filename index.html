@@ -22,145 +22,182 @@
 	<body>
 		
 		<div class="wrapper">
+			<div class="modal__window">   <!-- ^ Модальное окно -->
+				<span class="modal__close">X</span>   <!-- ^  -->
+			</div>   
 
 			<main class="main">
 				<div class="_container">
 
 					<!-- &=====================================  Головная секция ====================================== -->
 					<section class="head__section">
-						<div class="head__base-img">
-							<div class="head__avatar">
-								<img src="./images/Преподаватель.png" alt="Teacher">
+						<div class="head__base-img">   <!-- ^ Обложка -->
+							<div class="head__main">   <!-- ^ Аватарки и ФИО -->
+								<div class="head__avatar" onclick="openAvatar(this)">   <!-- ^ Аватарка -->
+									<img class="head__img" src="./images/Преподаватель.png" alt="People">
+								</div>
+		
+								<p class="head__name">   <!-- ^ ФИО -->
+									Петрова Галина Васильевна 
+								</p>
+							</div>
+
+							<div class="head__second">   <!-- ^ Краткая информация -->
+								<div class="head__second-item">   <!-- ^ Элемент -->
+									<div class="head__second-img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/position.svg" alt="Skill">
+									</div>
+
+									<p class="head__second-text">Преподаватель</p>   <!-- ^ Описание -->
+								</div>
+								
+								<div class="head__second-item">   <!-- ^ Элемент -->
+									<div class="head__second-img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/time.svg" alt="Skill">
+									</div>
+
+									<p class="head__second-text">10 лет</p>   <!-- ^ Описание -->
+								</div>
+
+								<div class="head__second-item">   <!-- ^ Элемент -->
+									<div class="head__second-img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/location.svg" alt="Skill">
+									</div>
+
+									<p class="head__second-text">Волгоград</p>   <!-- ^ Описание -->
+								</div>
 							</div>
 	
-							<p class="head__name">
-								Петрова Галина Васильевна
-							</p>
-	
 							<!-- & Дополнительные иконки на обложке -->
-							<img src="./images/Икноки/Азбука.png" style="top: 20%; left: 10%; transform: rotate(-45deg)" alt="ABC" class="head__deco-img">
-							<img src="./images/Икноки/Азбука.png" style="top: 40%; left: 80%; transform: rotate(15deg)" alt="ABC" class="head__deco-img">
-							<img src="./images/Икноки/Азбука.png" style="top: 60%; left: 25%; transform: rotate(65deg)" alt="ABC" class="head__deco-img">
-							<img src="./images/Икноки/Азбука.png" style="top: 0; left: 65%; transform: rotate(210deg)" alt="ABC" class="head__deco-img">
+							<img src="./images/Икноки/Азбука.png" style="top: 80%; left: 10%; transform: rotate(-45deg)" alt="ABC" class="head__deco-img">
+							<img src="./images/Икноки/Азбука.png" style="top: 10%; left: 80%; transform: rotate(15deg)" alt="ABC" class="head__deco-img">
+							<img src="./images/Икноки/Азбука.png" style="top: 70%; left: 75%; transform: rotate(65deg)" alt="ABC" class="head__deco-img">
+							<img src="./images/Икноки/Азбука.png" style="top: 10%; left: 45%; transform: rotate(210deg)" alt="ABC" class="head__deco-img">
 						</div>
 					</section>
 	
 					<!-- &=====================================  Секция "основная информация" ====================================== -->
 					<section class="about__section">
-						<h2 class="about__title title">
+						<h2 class="about__title title">   <!-- ^ Заголовок -->
 							Основная информация
 						</h2>
 	
-						<div class="about__row">
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Портер.svg" alt="Job">
-								</div>
+						<div class="about__row">   <!-- ^ Контент для размещения карточек -->
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Портер.svg" alt="Job">
+									</div>
 	
-								<div class="about__info">
-									<p class="about__info-param">Должность</p>
-									<p class="about__info-value">Преподаватель анлийского языка</p>
+									<p class="about__info-title">Должность</p>   <!-- ^ Заголовок -->
 								</div>
+
+								<p class="about__description">Преподаватель анлийского языка</p>   <!-- ^ Описание -->
 							</div>
 	
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Стаж.svg" alt="Experience">
-								</div>
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Стаж.svg" alt="Time">
+									</div>
 	
-								<div class="about__info">
-									<p class="about__info-param">Общий стаж</p>
-									<p class="about__info-value">10 лет</p>
+									<p class="about__info-title">Стаж</p>   <!-- ^ Заголовок -->
 								</div>
+
+								<p class="about__description">10 лет</p>   <!-- ^ Описание -->
 							</div>
+
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Кнопка.svg" alt="Place">
+									</div>
 	
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Кнопка.svg" alt="Place">
+									<p class="about__info-title">Место работы</p>   <!-- ^ Заголовок -->
 								</div>
-	
-								<div class="about__info">
-									<p class="about__info-param">Место работы</p>
-									<p class="about__info-value">Волгоградский Технологический Колледж</p>
-								</div>
+
+								<p class="about__description">Волгоградский технологический колледж</p>   <!-- ^ Описание -->
 							</div>
+
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Сертификат.svg" alt="Skill">
+									</div>
 	
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Сертификат.svg" alt="Level">
+									<p class="about__info-title">Квалификация</p>   <!-- ^ Заголовок -->
 								</div>
-	
-								<div class="about__info">
-									<p class="about__info-param">Квалификация</p>
-									<p class="about__info-value">Специалист</p>
-								</div>
+
+								<p class="about__description">Специалист</p>   <!-- ^ Описание -->
 							</div>
+
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Медаль.svg" alt="Hobby">
+									</div>
 	
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Медаль.svg" alt="Hobby">
+									<p class="about__info-title">Интересы</p>   <!-- ^ Заголовок -->
 								</div>
-	
-								<div class="about__info">
-									<p class="about__info-param">Интересы</p>
-									<p class="about__info-value">Коллекционирование персонажей Genshin</p>
-								</div>
+
+								<p class="about__description">Прогулки на свежем воздухе</p>   <!-- ^ Описание -->
 							</div>
+
+							<div class="about__card">   <!-- ^ Карточка -->
+								<div class="about__info">   <!-- ^ Иконка и заголовок -->
+									<div class="about__img">   <!-- ^ Иконка -->
+										<img src="./images/Икноки/Город.svg" alt="City">
+									</div>
 	
-							<div class="about__card">
-								<div class="about__img">
-									<img src="./images/Икноки/Город.svg" alt="City">
+									<p class="about__info-title">Город</p>   <!-- ^ Заголовок -->
 								</div>
-	
-								<div class="about__info">
-									<p class="about__info-param">Город</p>
-									<p class="about__info-value">Волгоград</p>
-								</div>
+
+								<p class="about__description">Волгоград</p>   <!-- ^ Описание -->
 							</div>
 						</div>
 					</section>
 	
 					<!-- &=====================================  Секция "Карьера" ====================================== -->
 					<section class="career__section">
-						<h2 class="career__title title">
+						<h2 class="career__title title">   <!-- ^ Заголовок -->
 							Карьера
 						</h2>
 	
-						<div class="career__body">
+						<div class="career__body">   <!-- ^ Тело -->
 	
 							<!-- & Образование -->
 							<div class="career__education education">
-								<h3 class="education__title title career__subtitle subtitle">
+								<h3 class="education__title title career__subtitle subtitle">   <!-- ^ Подзаголовок -->
 									Образование
 								</h3>
 	
-								<div class="career__content education__content">
-									<div class="career__row education__row">
-										<p class="career__period education__period">
+								<div class="career__content education__content">   <!-- ^ Элемент образования -->
+									<div class="career__row education__row">   <!-- ^ Элемент пути -->
+										<p class="career__period education__period">   <!-- ^ Дата -->
 											c 01.01.2016 по 01.01.2018
 										</p>
 	
-										<p class="career__place education__place">
+										<p class="career__place education__place">   <!-- ^ Место -->
 											Волгоградский Технологический Колледж(ВТК)
 										</p>
 									</div>
 	
-									<div class="career__row education__row">
-										<p class="career__period education__period">
+									<div class="career__row education__row">   <!-- ^ Элемент пути -->
+										<p class="career__period education__period">   <!-- ^ Дата -->
 											c 01.01.2012 по 01.01.2016
 										</p>
 	
-										<p class="career__place education__place">
+										<p class="career__place education__place">   <!-- ^ Место -->
 											МОУ Лицей №11
 										</p>
 									</div>
 	
-									<div class="career__row education__row">
-										<p class="career__period education__period">
+									<div class="career__row education__row">   <!-- ^ Элемент пути -->
+										<p class="career__period education__period">   <!-- ^ Дата -->
 											c 01.01.2016 по 01.01.2012
 										</p>
 	
-										<p class="career__place education__place">
+										<p class="career__place education__place">   <!-- ^ Место -->
 											Школа №13
 										</p>
 									</div>
@@ -168,28 +205,28 @@
 							</div>
 	
 							<!-- & Опыт работы -->
-							<div class="career__experience experience">
-								<h3 class="experience__title title career__subtitle subtitle">
+							<div class="career__experience experience">   <!-- ^ Элемент опыта работы -->
+								<h3 class="experience__title title career__subtitle subtitle">   <!-- ^ Подзаголовок -->
 									Опыт работы
 								</h3>
 	
 								<div class="career__content experience__content">
-									<div class="career__row experience__row">
-										<p class="career__period experience__period">
+									<div class="career__row experience__row">   <!-- ^ Элемент пути -->
+										<p class="career__period experience__period">   <!-- ^ Дата -->
 											c 01.01.2020
 										</p>
 	
-										<p class="career__place experience__place">
+										<p class="career__place experience__place">   <!-- ^ Место -->
 											Волгоградский Технологический Колледж(ВТК)
 										</p>
 									</div>
 	
-									<div class="career__row experience__row">
-										<p class="career__period experience__period">
+									<div class="career__row experience__row">   <!-- ^ Элемент пути -->
+										<p class="career__period experience__period">   <!-- ^ Дата -->
 											c 01.01.2019 по 01.01.2020
 										</p>
 	
-										<p class="career__place experience__place">
+										<p class="career__place experience__place">   <!-- ^ Место -->
 											МОУ Лицей №11
 										</p>
 									</div>
@@ -200,142 +237,115 @@
 	
 					<!-- &=====================================  Секция "Награды и Достижения" ====================================== -->
 					<section class="award__section">
-						<h2 class="award__title title">
+
+						<h2 class="award__title title">   <!-- ^ Заголовок -->
 							Награды и Достижения
 						</h2>
 	
-						<div class="award__content">
-							<!-- & Сертификат -->
-							<div class="award__item _award-horizontal">
-								<div class="award__img">
-									<img src="./images/Сертификат.png" alt="Award">
+						<div class="award__content">   <!-- ^ Контент для карточек -->
+							<div class="award__item card">   <!-- ^ Карточка -->
+								<h4 class="card__title">   <!-- ^ Заголовок карточки -->
+									Сертификат
+								</h4>
+
+								<p class="card__description">   <!-- ^ Описание карточки -->
+									Первое место: "История моей страны"
+								</p>
+
+								<div class="card__button">   <!-- ^ Кнопка открытия -->
+									Посмотреть
 								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
+
+								<div class="card__img _hidden">   <!-- ^ Картинка карточки -->
+									<img src="./images/Сертификат.png" alt="IMG">
+								</div>
 							</div>
-	
-							<!-- & Диплом -->
-							<div class="award__item _award-vertical">
-								<div class="award__img">
-									<img src="./images/Диплом.png" alt="Award">
+
+							<div class="award__item card">   <!-- ^ Карточка -->
+								<h4 class="card__title">   <!-- ^ Заголовок карточки -->
+									Диплом
+								</h4>
+
+								<p class="card__description">   <!-- ^ Описание карточки -->
+									Участие в конкурсе "Молодые дарования России"
+								</p>
+
+								<div class="card__button">   <!-- ^ Кнопка открытия -->
+									Посмотреть
 								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
+
+								<div class="card__img _hidden">   <!-- ^ Картинка карточки -->
+									<img src="./images/Диплом.png" alt="IMG">
+								</div>
 							</div>
-	
-							<!-- & Диплом -->
-							<div class="award__item _award-vertical">
-								<div class="award__img">
-									<img src="./images/Диплом.png" alt="Award">
+
+							<div class="award__item card">   <!-- ^ Карточка -->
+								<h4 class="card__title">   <!-- ^ Заголовок карточки -->
+									Диплом
+								</h4>
+
+								<p class="card__description">   <!-- ^ Описание карточки -->
+									Второе место "Лучший педагог английского языка"
+								</p>
+
+								<div class="card__button">   <!-- ^ Кнопка открытия -->
+									Посмотреть
 								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
+
+								<div class="card__img _hidden">   <!-- ^ Картинка карточки -->
+									<img src="./images/Диплом.png" alt="IMG">
+								</div>
 							</div>
-	
-							<!-- & Диплом -->
-							<div class="award__item _award-vertical">
-								<div class="award__img">
-									<img src="./images/Диплом.png" alt="Award">
+
+							<div class="award__item card">   <!-- ^ Карточка -->
+								<h4 class="card__title">   <!-- ^ Заголовок карточки -->
+									Сертификат
+								</h4>
+
+								<p class="card__description">   <!-- ^ Описание карточки -->
+									Участие в World Skill
+								</p>
+
+								<div class="card__button">   <!-- ^ Кнопка открытия -->
+									Посмотреть
 								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
+
+								<div class="card__img _hidden">   <!-- ^ Картинка карточки -->
+									<img src="./images/Сертификат.png" alt="IMG">
+								</div>
 							</div>
-	
-							<!-- & Сертификат -->
-							<div class="award__item _award-horizontal">
-								<div class="award__img">
-									<img src="./images/Сертификат.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div>
-	
-							<!-- & Сертификат -->
-							<div class="award__item _award-horizontal">
-								<div class="award__img">
-									<img src="./images/Сертификат.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div>
-	
-							<!-- & Диплом -->
-							<div class="award__item _award-vertical">
-								<div class="award__img">
-									<img src="./images/Диплом.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div>
-	
-							<!-- & Сертификат -->
-							<div class="award__item _award-horizontal">
-								<div class="award__img">
-									<img src="./images/Сертификат.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div>
-	
-							<!-- & Сертификат -->
-							<div class="award__item _award-horizontal">
-								<div class="award__img">
-									<img src="./images/Сертификат.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div>
-	
-							<!-- & Диплом -->
-							<div class="award__item _award-vertical">
-								<div class="award__img">
-									<img src="./images/Диплом.png" alt="Award">
-								</div>
-	
-								<img src="./images/Икноки/Звезда.svg" style="top: 10%; left: 0%; transform: rotate(85deg) scale(1);" alt="star" class="award__stars">
-								<img src="./images/Икноки/Звезда.svg" style="top: 70%; left: 65%; transform: rotate(55deg) scale(0.85);" alt="star" class="award__stars">
-							</div> 
 						</div>
 					</section>
 	
 					<!-- &=====================================  Секция "Фотогалерея" ====================================== -->
 					<section class="gallery__section">
-						<h2 class="gallery__title title">
+						<h2 class="gallery__title title">   <!-- ^ Заголовок -->
 							Фотогалерея
 						</h2>
 
-						<div class="gallery__slider slider">
+						<div class="gallery__slider slider">   <!-- ^ Тело со слайдером -->
 							<!-- & Окно слайдера -->
-							<div class="slider__window">
-								<div class="slider__line">
-									<div class="slider__img">
+							<div class="slider__window">  <!-- ^ Окно слайдера -->
+								<div class="slider__line">   <!-- ^ Линия фотографий -->
+									<div class="slider__img">   <!-- ^ Фотография -->
 										<img src="./images/Фоторафия слайдера.png" alt="Meet">
 									</div>
-									<div class="slider__img">
+									<div class="slider__img">   <!-- ^ Фотография -->
 										<img src="./images/Фоторафия слайдера.png" alt="Meet">
 									</div>
-									<div class="slider__img">
+									<div class="slider__img">   <!-- ^ Фотография -->
 										<img src="./images/Фоторафия слайдера.png" alt="Meet">
 									</div>
 								</div>
 
 								<!-- & Кнопки слайдера слайдера -->
-								<div class="slider__panel slider__panel-prev">
+								<div class="slider__panel slider__panel-prev" onclick="sliderMove(-1)">
 									<div class="silder__button-img slider__button-prev">
 										<img style="transform: rotate(180deg);" src="./images/Икноки/Стрелочка.svg" alt="Arrow">
 									</div>
 								</div>
 
-								<div class="slider__panel slider__panel-next">
+								<div class="slider__panel slider__panel-next"  onclick="sliderMove(1)">
 									<div class="silder__button-img slider__button-next">
 										<img src="./images/Икноки/Стрелочка.svg" alt="Arrow">
 									</div>
@@ -346,41 +356,53 @@
 
 					<!-- &=====================================  Секция "Контактная информация" ====================================== -->
 					<section class="contact__section">
-						<h2 class="contact__title title">
+						<h2 class="contact__title title">   <!-- ^ Заголовок -->
 							Контактная информация
 						</h2>
 
-						<div class="contact__body">
+						<div class="contact__body">   <!-- ^ Тело карточек с контактной инфой -->
 							<!-- & Блок с информацией -->
-							<div class="contact__row">
-								<p class="contact__item">
+							<div class="contact__item" onclick="copyText(this)">   <!-- ^ Карточка -->
+								<p class="contact__value">   <!-- ^ Название карточки -->
 									Номер телефона
 								</p>
 
-								<p class="contact__item">
+								<p class="contact__value contact-value">   <!-- ^ Значение карточки -->
 									+7(999)-024-31-11
+								</p>
+
+								<p class="contact__value">   <!-- ^ Кнопка для скопирования -->
+									Нажмите, чтобы скопировать
 								</p>
 							</div>
 
 							<!-- & Блок с информацией -->
-							<div class="contact__row">
-								<p class="contact__item">
+							<div class="contact__item" onclick="copyText(this)">   <!-- ^ Карточка -->
+								<p class="contact__value">   <!-- ^ Название карточки -->
 									Почта
 								</p>
 
-								<p class="contact__item">
+								<p class="contact__value contact-value">   <!-- ^ Значение карточки -->
 									TheBestTeacher@mail.ru
+								</p>
+
+								<p class="contact__value">   <!-- ^ Кнопка для скопирования -->
+									Нажмите, чтобы скопировать
 								</p>
 							</div>
 
 							<!-- & Блок с информацией -->
-							<div class="contact__row">
-								<p class="contact__item">
-									Адрес
+							<div class="contact__item" onclick="copyText(this)">   <!-- ^ Карточка -->
+								<p class="contact__value">   <!-- ^ Название карточки -->
+									Адресс
 								</p>
 
-								<p class="contact__item">
-									ул. Пушкина, дом 24
+								<p class="contact__value contact-value">   <!-- ^ Значение карточки -->
+									Ул. Пушкина, д.18
+								</p>
+
+								<p class="contact__value">   <!-- ^ Кнопка для скопирования -->
+									Нажмите, чтобы скопировать
 								</p>
 							</div>
 						</div>
@@ -388,11 +410,12 @@
 				</div>
 			</main>
 
+			<!-- &=====================================  Подвал ====================================== -->
 			<footer class="footer">
 				<div class="_container">
 					<div class="footer__content">
 						<p class="copyright">
-							copyright © 2023 Все права защищены
+							copyright © 2023 Все права принадлежат Кривенькову Андрею
 						</p>
 					</div>
 				</div>

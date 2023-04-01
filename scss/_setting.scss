@@ -7,7 +7,7 @@
 	overflow: hidden;
 }
 
-._container {
+._container {   
 	width: 100%;
 	max-width: var(--container-width);
 
@@ -17,6 +17,13 @@
 
 html, body {
 	background-color: var(--background-color);
+}
+body._modal-open {   // ^ Запрет скрола при открытие модального окна
+	height: 100vh;
+
+	overflow-y: hidden;
+
+	padding-right: 10px;   // ^ Предотвращение дёрганья сайта
 }
 
 section {
@@ -78,7 +85,7 @@ section {
 	}
 }
 
-.subtitle {
+.subtitle {   // ^ Подзаголовок
 	width: 300px;
 
     font-size: 20px;
@@ -90,6 +97,53 @@ section {
 
 		font-size: 16px;
 	}
+}
+
+.modal__window {   // ^ Модальное окно
+	opacity: 0;
+	visibility: hidden;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	z-index: 100;
+
+	width: 100%;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: var(--color-semi-black);
+
+	overflow: hidden;
+
+
+	transition: .5s linear;
+
+	cursor: pointer;
+
+
+	& > img {   // ^ Картинка в модальном окне
+		
+	}
+}
+.modal__window._active {   // ^ Проявление модального окна
+	opacity: 1;
+	visibility: visible;
+}
+
+.modal__close {   // ^ Кнопка закрытия модального окна
+	position: absolute;
+
+	top: 15%;
+	right: 15%;
+
+	font-size: 40px;
+
+	cursor: pointer;
 }
 
 /* &===========================================================*/
