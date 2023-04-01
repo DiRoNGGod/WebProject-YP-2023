@@ -75,7 +75,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
 
-            border: 10px solid var(--color-set-background);
+            border: 10px solid var(--color-background);
         }
 
         & > img {
@@ -151,7 +151,7 @@
 
         padding: 5px;
 
-        background-color: var(--color-set-content);
+        background-color: var(--color-content);
         border-radius: calc(var(--border-radius) / 2);
     }
 

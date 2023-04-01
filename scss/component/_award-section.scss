@@ -29,7 +29,7 @@
     }
 }
 .card {   // ^ Отдельные стили карточки
-    background-color: var(--color-set-content);
+    background-color: var(--color-block);
     border: 2px solid var(--color-set-accent);
     border-radius: var(--border-radius);
 
@@ -76,7 +76,7 @@
 
         padding: 5px;
 
-        background-color: var(--color-set-accent);
+        background-color: var(--color-content);
 
         border-radius: calc(var(--border-radius) / 2);
 

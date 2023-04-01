@@ -23,6 +23,10 @@
         flex-direction: column;
 
         background-color: var(--color-block);
+        border: 2px solid var(--color-set-accent);
+        border-radius: var(--border-radius);
+
+        box-shadow: 0 0 10px var(--color-content);
 
         border-radius: var(--border-radius);
 
@@ -41,7 +45,7 @@
         }
 
         & > *:last-child {   // ^ Изменения стиля для подсказки
-            color: var(--color-set-background);
+            color: var(--color-background);
             font-style: italic;
         }
 

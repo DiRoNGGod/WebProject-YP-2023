@@ -2,10 +2,10 @@
 	width: 10px;
 }
 ::-webkit-scrollbar-track {   /* * Цвет полосы скролбара */
-	background: var(--color-set-background);
+	background: var(--color-background);
 }
 ::-webkit-scrollbar-thumb {   /* * Ползунок скролбара */
-	background: var(--color-set-content);
+	background: var(--color-content);
 
 	border-radius: 8px;
 }

@@ -20,6 +20,9 @@
         overflow: hidden;
         position: relative;
 
+        border: 2px solid var(--color-set-accent);
+
+        box-shadow: 0 0 10px var(--color-content);
 
         @media (max-width: 900px) {
             width: 100%;
@@ -54,7 +57,7 @@
         height: 50%;
         width: 50px;
 
-        background-color: var(--color-block);
+        background-color: var(--color-set-accent);
         border-radius: calc(var(--border-radius) / 2);
 
         position: absolute;

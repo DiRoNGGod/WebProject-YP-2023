@@ -18,11 +18,10 @@
 	--color-semi-black: #000000e1;
 	--color-white: #fff;
 
-	--color-set-background: #25274D;   // * Цвет для заднего фона
-	--color-set-background-add: #464866;   // * Цвет для заголовков
-	--color-set-load-content: #AAABB8;   // * Цвет используемый при загрузке картинок
-	--color-set-content: #2E9CCA;   // * Акцент 
-	--color-set-accent: #29648A;   // * Цвет для блоков контента
+	--color-set-background: #212121;   // * Цвет для заднего фона 
+	--color-set-content: #0D7377;   // * Цвет для контента 
+	--color-set-load-content: #323232;   // * Цвет используемый при загрузке картинок 
+	--color-set-accent: #14FFEC;   // * Акцент 
 
 	--transition-default: 0.3s linear;
 }
@@ -33,8 +32,8 @@ html {
 	--font-color: var(--color-white);
 
 	--background-color: var(--color-set-background);
-	--color-block: var(--color-set-accent);
+	--color-block: var(--color-set-load-content);
 	--color-content: var(--color-set-content);
-	--color-title: var(--color-set-background-add);
+	--color-title: var(--color-set-content);
 	--color-help: var(--color-set-load-content);
 }
